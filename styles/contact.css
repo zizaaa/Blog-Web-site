@@ -159,6 +159,10 @@ form {
     margin-left: 10px;
 }
 
+.some-text .soc a:hover {
+    color: #dd783f;
+}
+
 .some-text .soc-container {
     display: flex;
     flex-direction: column;
