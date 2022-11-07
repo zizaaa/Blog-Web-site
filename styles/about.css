@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* var */
+
+:root {
+    --BACKGROUND-COLOR: #ecf0f3;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding-top: 65px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* nav bar */
+
+nav {
+    width: 100%;
+    height: 65px;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, .2);
+    z-index: 1;
+    background-color: var(--BACKGROUND-COLOR);
+}
+
+nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+
+
+/* left-navbar */
+
+.navbar .left-navbar {
+    font-family: 'Dancing Script', cursive;
+}
+
+
+/* left navbar logo */
+
+.navbar .left-navbar .logo {
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar .left-navbar .logo-name {
+    font-size: 1rem;
+    font-style: inherit;
+}
+
+
+/* right navbar */
+
+.navbar .right-navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.navbar .right-navbar a:hover {
+    transform: translateX(2px);
+    transition: all .2s;
+    color: #dd783f;
+}
+
+.hero-container {
+    background: url("https://images.unsplash.com/photo-1612847759709-5c6a2bfe7e90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container h2 {
+    font-weight: 400;
+    font-size: 3rem;
+    background-color: var(--BACKGROUND-COLOR);
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 4px 2px rgba(0, 0, 0, .2);
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+}
+
+.content-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.content {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 400px;
+    width: 30%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: width 1s;
+    box-shadow: inset 1px 1px 4px 4px rgba(0, 0, 0, .2);
+}
+
+.content:hover {
+    transition: all 1s;
+    box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, .2);
+    width: 90%;
+    animation-name: animate;
+}
+
+.content:hover .img-container {
+    transition: all 1s;
+    left: 20px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, .2);
+}
+
+.content:hover .text-container {
+    transition: all 1s;
+    top: 30%;
+    right: 10%;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -95px;
+}
+
+.pointer-container img {
+    width: 60px;
+    height: 60px;
+    transform: skewX(-20deg);
+    transform: rotate(10deg);
+}
+
+.pointer-container p {
+    margin-bottom: 10px;
+}
+
+.img-container {
+    width: 350px;
+    height: 350px;
+    /* margin-right: 20px; */
+    border-radius: 10px;
+    position: absolute;
+    left: 25px;
+}
+
+.img-container img {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.text-container {
+    position: absolute;
+    width: 50%;
+    top: 100%;
+    right: 10%;
+    transition: all .4s;
+}
+
+.text-container p {
+    margin-bottom: 20px;
+}
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: url("https://uploads-ssl.webflow.com/63658007212f3a43fcd284ef/63658008212f3a77c3d28567_footer-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+footer h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 90px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+footer .bot-line {
+    width: 200px;
+    border-top: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    height: 40px;
+    width: 300px;
+    padding-left: 10px;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    outline: none;
+}
+
+.submit {
+    cursor: pointer;
+    height: 40px;
+    padding: 0 20px;
+    color: white;
+    border: none;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(167, 167, 167);
+}
+
+.submit:hover {
+    transition: all .3s;
+    background-color: #dd783f;
+}
+
+.footer-bar-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 83%;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    box-shadow: 1px -2px 4px rgba(0, 0, 0, .3);
+}
+
+.footer-bar a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: white;
+}
+
+.footer-bar {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-footer-bar {
+    font-family: 'Dancing Script', cursive;
+}
+
+.left-footer-bar .logo {
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.left-footer-bar .logo-name {
+    font-size: 1rem;
+    font-style: inherit;
+    color: white;
+}
